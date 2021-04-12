@@ -6,7 +6,7 @@ import java.util.List;
 
 @Slf4j
 public class FakeBeanFactory {
-    public <T extends Object> T getBean(Class<T> clazz) {
+    public <T> T getBean(Class<T> clazz) {
         if (clazz.equals(Customer.class)) {
             var loggingProxy = new CustomerLoggingProxy();
             loggingProxy.setBefore(() -> log.info("payment is being processed")); //you can get Before Instance from a beanFactory
