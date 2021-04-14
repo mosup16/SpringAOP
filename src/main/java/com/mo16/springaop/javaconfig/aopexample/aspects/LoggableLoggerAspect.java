@@ -19,11 +19,6 @@ public class LoggableLoggerAspect {
     void loggableMethod() {
     }
 
-//    @Pointcut("@within(com.mo16.springaop.javaconfig.aopexample.annotiations.Loggable)")
-//    void loggableClass() {
-//    }
-
-    // @Pointcut("loggableClass() || loggableMethod()") used to support method and class level annotation
     @Pointcut("loggableMethod()")
     void onLoggable() {
     }
